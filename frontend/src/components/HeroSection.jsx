@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
 const DASHBOARD_IMG = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/qj6750nx_web%20and%20mobile%20app%20ui.png";
+const MASCOT_HERO = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/eiqbom3k_Mascot_5.png";
 
 const highlights = [
   "7 Days Free Trial",
@@ -22,6 +23,9 @@ export default function HeroSection() {
         background: "linear-gradient(180deg, #FFF7ED 0%, #FFFFFF 100%)",
       }}
     >
+      {/* Background decorative elements */}
+      <div className="absolute top-40 left-10 w-72 h-72 bg-orange-200/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-100/40 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -91,16 +95,50 @@ export default function HeroSection() {
 
           {/* Right Visual */}
           <div className="relative lg:pl-8">
-            {/* Dashboard Screenshot - Clean without frame */}
+            {/* Browser frame with dashboard */}
             <div
               data-testid="hero-dashboard-preview"
-              className="relative animate-scale-in"
+              className="relative browser-frame animate-scale-in"
             >
+              <div className="browser-dots">
+                <div className="browser-dot bg-red-400" />
+                <div className="browser-dot bg-yellow-400" />
+                <div className="browser-dot bg-green-400" />
+              </div>
               <img
                 src={DASHBOARD_IMG}
-                alt="atmytyp Dashboard - Laptop and Mobile"
+                alt="atmytyp Dashboard"
+                className="w-full rounded-b-lg"
+              />
+            </div>
+
+            {/* Mascot peeking */}
+            <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-32 md:w-44 float-element">
+              <img
+                src={MASCOT_HERO}
+                alt="atmytyp Mascot"
+                data-testid="hero-mascot"
                 className="w-full h-auto drop-shadow-2xl"
               />
+            </div>
+
+            {/* Floating stats cards */}
+            <div
+              className="absolute -left-4 top-1/4 bg-white rounded-xl shadow-xl p-4 float-element-delayed hidden md:block"
+              data-testid="floating-stat-sales"
+            >
+              <div className="text-sm text-slate-500">Total Sales</div>
+              <div className="text-2xl font-bold text-slate-900 font-mono">₹24.5L</div>
+              <div className="text-xs text-green-500 font-medium">+12% this month</div>
+            </div>
+
+            <div
+              className="absolute -right-4 top-8 bg-white rounded-xl shadow-xl p-4 float-element hidden lg:block"
+              data-testid="floating-stat-employees"
+            >
+              <div className="text-sm text-slate-500">Employees</div>
+              <div className="text-2xl font-bold text-slate-900 font-mono">156</div>
+              <div className="text-xs text-orange-500 font-medium">All tracked</div>
             </div>
           </div>
         </div>
