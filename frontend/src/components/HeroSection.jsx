@@ -22,9 +22,6 @@ export default function HeroSection() {
         background: "linear-gradient(180deg, #FFF7ED 0%, #FFFFFF 100%)",
       }}
     >
-      {/* Background decorative elements */}
-      <div className="absolute top-40 left-10 w-72 h-72 bg-orange-200/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-100/40 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
