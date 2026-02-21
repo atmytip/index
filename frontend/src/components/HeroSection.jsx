@@ -95,6 +95,16 @@ export default function HeroSection() {
 
           {/* Right Visual */}
           <div className="relative lg:pl-8">
+            {/* Mascot on the left */}
+            <div className="absolute -left-4 md:-left-12 bottom-1/4 w-28 md:w-36 float-element z-10">
+              <img
+                src={MASCOT_HERO}
+                alt="atmytyp Mascot"
+                data-testid="hero-mascot"
+                className="w-full h-auto drop-shadow-2xl"
+              />
+            </div>
+
             {/* Laptop and Mobile Dashboard */}
             <div
               data-testid="hero-dashboard-preview"
@@ -103,16 +113,6 @@ export default function HeroSection() {
               <img
                 src={DASHBOARD_IMG}
                 alt="atmytyp Dashboard on Laptop and Mobile"
-                className="w-full h-auto drop-shadow-2xl"
-              />
-            </div>
-
-            {/* Mascot peeking */}
-            <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-32 md:w-44 float-element">
-              <img
-                src={MASCOT_HERO}
-                alt="atmytyp Mascot"
-                data-testid="hero-mascot"
                 className="w-full h-auto drop-shadow-2xl"
               />
             </div>
