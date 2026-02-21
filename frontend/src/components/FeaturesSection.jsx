@@ -121,13 +121,13 @@ export default function FeaturesSection() {
                   </div>
                 ))}
 
-                {/* Mascot for Finance category */}
-                {group.category === "Finance" && (
+                {/* Mascot for HR category */}
+                {group.category === "HR" && (
                   <div className="hidden lg:flex items-end justify-center">
                     <img
                       src={MASCOT_FINANCE}
-                      alt="Finance Mascot"
-                      data-testid="mascot-finance"
+                      alt="HR Mascot"
+                      data-testid="mascot-hr"
                       className="w-40 h-auto drop-shadow-lg float-element"
                     />
                   </div>
