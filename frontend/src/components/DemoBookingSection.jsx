@@ -18,7 +18,7 @@ import axios from "axios";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-const MASCOT_CTA = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/zkfllvcf_Mascot_4.png";
+const MASCOT_CTA = "https://customer-assets.emergentagent.com/job_employee-pricing-hub/artifacts/kvjj5r6z_Mascot_6.png";
 
 const benefits = [
   { icon: Clock, text: "30-minute personalized demo" },
