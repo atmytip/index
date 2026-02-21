@@ -37,7 +37,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-orange-200 rounded-full px-4 py-2 text-sm font-medium text-orange-700 shadow-sm"
             >
               <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-              Trusted by 500+ businesses
+              The most comprehensive solution
             </div>
 
             {/* Headline */}
