@@ -1,0 +1,157 @@
+{
+  "brand_identity": {
+    "name": "atmytyp",
+    "archetype": "The Friendly Powerhouse",
+    "core_values": ["All-in-One", "Approachability", "Clarity", "Growth"],
+    "voice": "Professional but not stiff. Encouraging. Clear.",
+    "visual_mood": "High energy, clean, spacious, trusted."
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["600", "700", "800"],
+      "letter_spacing": "-0.02em",
+      "usage": "Use for all section titles and hero text. Don't be afraid of heavy weights."
+    },
+    "body": {
+      "font_family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "High legibility for features and pricing details."
+    },
+    "mono": {
+      "font_family": "JetBrains Mono, monospace",
+      "usage": "Use for data metrics, pricing numbers, and 'code-like' aesthetic details."
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#F97316",
+      "foreground": "#FFFFFF",
+      "hover": "#EA580C",
+      "active": "#C2410C"
+    },
+    "secondary": {
+      "DEFAULT": "#FFF7ED",
+      "foreground": "#F97316",
+      "border": "#FED7AA"
+    },
+    "neutral": {
+      "50": "#F8FAFC",
+      "100": "#F1F5F9",
+      "200": "#E2E8F0",
+      "300": "#CBD5E1",
+      "400": "#94A3B8",
+      "500": "#64748B",
+      "600": "#475569",
+      "700": "#334155",
+      "800": "#1E293B",
+      "900": "#0F172A",
+      "950": "#020617"
+    },
+    "semantic": {
+      "success": "#22C55E",
+      "warning": "#EAB308",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    },
+    "background": {
+      "default": "#FFFFFF",
+      "subtle": "#FFF7ED",
+      "dark": "#0F172A"
+    }
+  },
+  "layout_strategies": {
+    "spacing": {
+      "container_padding": "px-4 md:px-8 lg:px-12",
+      "section_spacing": "py-20 md:py-32",
+      "element_gap": "gap-6 md:gap-8"
+    },
+    "grid_system": {
+      "bento_features": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-[300px] gap-6",
+      "pricing_cards": "grid grid-cols-1 md:grid-cols-3 gap-8 items-start"
+    },
+    "border_radius": {
+      "sm": "rounded-md",
+      "default": "rounded-xl",
+      "lg": "rounded-2xl",
+      "full": "rounded-full"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-orange-500 text-white hover:bg-orange-600 shadow-lg hover:shadow-orange-500/25 transition-all duration-300 rounded-full px-8 py-4 font-bold text-lg",
+      "secondary": "bg-white text-orange-600 border-2 border-orange-100 hover:border-orange-200 hover:bg-orange-50 transition-all duration-300 rounded-full px-8 py-4 font-bold text-lg",
+      "ghost": "text-slate-600 hover:text-orange-600 hover:bg-orange-50 rounded-full px-6 py-3 font-medium"
+    },
+    "cards": {
+      "feature": "bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-8",
+      "pricing_highlighted": "bg-slate-900 text-white shadow-2xl scale-105 rounded-2xl p-8 border-2 border-orange-500 relative overflow-hidden",
+      "pricing_standard": "bg-white border border-slate-200 shadow-lg rounded-2xl p-8"
+    },
+    "navigation": {
+      "style": "fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100/50"
+    }
+  },
+  "assets_map": {
+    "logo": "https://customer-assets.emergentagent.com/job_employee-pricing-hub/artifacts/t0emrgbk_brand_logo-B0Fv9ze4.svg",
+    "screenshots": {
+      "dashboard_main": "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/qj6750nx_web%20and%20mobile%20app%20ui.png"
+    },
+    "mascots": {
+      "hero_welcome": "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/eiqbom3k_Mascot_5.png",
+      "feature_finance": "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/5cure82k_Mascot_3.png",
+      "feature_ops": "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/fag4z2hz_Mascot_8.png",
+      "cta_footer": "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/zkfllvcf_Mascot_4.png"
+    },
+    "stock_images": {
+      "office_team": "https://images.unsplash.com/photo-1758691737138-7b9b1884b1db?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "meeting": "https://images.unsplash.com/photo-1760611656007-f767a8082758?crop=entropy&cs=srgb&fm=jpg&q=85"
+    }
+  },
+  "sections_guide": {
+    "hero": {
+      "layout": "Split screen (Text Left, Visual Right)",
+      "visual": "Combine 'dashboard_main' screenshot with 'hero_welcome' mascot peeking from behind it. Use floating 3D-style UI cards around them.",
+      "bg": "bg-gradient-to-b from-orange-50 to-white"
+    },
+    "features_bento": {
+      "layout": "Tetris Grid. Mix large squares (spanning 2 cols) with small tall cards.",
+      "style": "Use 'feature_finance' and 'feature_ops' mascots as stickers on specific feature cards."
+    },
+    "dashboard_preview": {
+      "style": "Macbook or Browser window frame style container. High elevation shadow.",
+      "content": "Use 'dashboard_main' image."
+    },
+    "pricing": {
+      "layout": "3 Cards. Center card (Standard) is highlighted/dark mode.",
+      "toggle": "Pill shaped toggle for Monthly/Yearly."
+    },
+    "employee_portal": {
+      "style": "Card-based layout showing 'Pay Slips', 'Leave Balance', 'Tax Info'.",
+      "visual": "Clean, approachable, stress-free. Use 'office_team' image as a subtle backdrop or side image."
+    },
+    "demo_booking": {
+      "layout": "Two column. Left: 'Why Book?' list. Right: Calendar Form.",
+      "style": "Use Shadcn Calendar component. Make it look embedded and seamless."
+    }
+  },
+  "instructions_to_main_agent": {
+    "1": "Use the provided Mascot URLs strictly. Do not use generic emoji icons.",
+    "2": "The primary color is Orange #F97316. Use it for Primary Buttons and Key Highlights. Do not overuse it for backgrounds (it causes eye fatigue).",
+    "3": "For the 'Book a Demo' form, use the Shadcn 'Calendar' and 'Form' components. Do not build a custom date picker.",
+    "4": "Ensure the Pricing Toggle works and switches the displayed prices.",
+    "5": "The Navigation Bar must be sticky and glassmorphic.",
+    "6": "Use the 'Manrope' font for Headings and 'Inter' for body. Import them from Google Fonts in index.css.",
+    "7": "Use 'lucide-react' for all functional icons (dashboard, users, chart, etc.).",
+    "8": "For the 'All-in-One' grid, ensure 'Finance', 'HR', 'Operations', and 'Data' are clearly visually distinct groups.",
+    "9": "Implement smooth scrolling for anchor links.",
+    "10": "ALL interactive elements (buttons, inputs, links) MUST have a unique `data-testid` attribute (e.g., `data-testid='hero-book-demo-btn'`)."
+  },
+  "universal_guidelines": [
+    "Do not use gradients for dark colors.",
+    "Avoid centered layouts for heavy text.",
+    "Use 2-3x more spacing than typical defaults.",
+    "Add micro-interactions (hover lift, scale) to all cards.",
+    "Use sonner for toast notifications."
+  ]
+}
