@@ -158,12 +158,12 @@ export default function DemoBookingSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           {/* Mascot above title */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-2">
             <img
               src={MASCOT_CTA}
               alt="atmytyp Mascot"
               data-testid="demo-header-mascot"
-              className="w-32 md:w-40 h-auto drop-shadow-lg"
+              className="w-44 md:w-56 h-auto drop-shadow-lg"
             />
           </div>
           <span className="inline-block bg-orange-100 text-orange-700 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
