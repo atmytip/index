@@ -96,7 +96,7 @@ export default function HeroSection() {
           {/* Right Visual */}
           <div className="relative lg:pl-8">
             {/* Mascot on the left */}
-            <div className="absolute -left-12 md:-left-20 bottom-1/4 w-36 md:w-48 float-element z-10">
+            <div className="absolute -left-20 md:-left-28 bottom-1/4 w-36 md:w-48 float-element z-10">
               <img
                 src={MASCOT_HERO}
                 alt="atmytyp Mascot"
