@@ -128,7 +128,7 @@ export default function FeaturesSection() {
                       src={MASCOT_FINANCE}
                       alt="HR Mascot"
                       data-testid="mascot-hr"
-                      className="w-40 h-auto drop-shadow-lg float-element"
+                      className="w-52 h-auto drop-shadow-lg float-element"
                     />
                   </div>
                 )}
