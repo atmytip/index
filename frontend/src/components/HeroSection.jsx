@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
 const DASHBOARD_IMG = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/qj6750nx_web%20and%20mobile%20app%20ui.png";
-const MASCOT_HERO = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/eiqbom3k_Mascot_5.png";
 
 const highlights = [
   "7 Days Free Trial",
