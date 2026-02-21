@@ -138,12 +138,12 @@ export default function FeaturesSection() {
         </div>
 
         {/* Operations Mascot */}
-        <div className="absolute top-32 -right-16 w-48 hidden xl:block">
+        <div className="absolute top-24 right-4 w-36 hidden xl:block">
           <img
             src={MASCOT_OPS}
             alt="Operations Mascot"
             data-testid="mascot-operations"
-            className="w-full h-auto opacity-80 float-element-delayed"
+            className="w-full h-auto opacity-90 float-element-delayed"
           />
         </div>
       </div>
