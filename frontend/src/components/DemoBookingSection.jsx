@@ -157,6 +157,15 @@ export default function DemoBookingSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
+          {/* Mascot above title */}
+          <div className="flex justify-center mb-6">
+            <img
+              src={MASCOT_CTA}
+              alt="atmytyp Mascot"
+              data-testid="demo-header-mascot"
+              className="w-32 md:w-40 h-auto drop-shadow-lg"
+            />
+          </div>
           <span className="inline-block bg-orange-100 text-orange-700 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
             Get Started
           </span>
