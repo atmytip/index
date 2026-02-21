@@ -7,7 +7,6 @@ import {
   ClipboardList,
   Truck,
   Clock,
-  BarChart3,
   Receipt,
   Wallet,
   Building2,
