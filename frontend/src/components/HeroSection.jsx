@@ -95,20 +95,15 @@ export default function HeroSection() {
 
           {/* Right Visual */}
           <div className="relative lg:pl-8">
-            {/* Browser frame with dashboard */}
+            {/* Laptop and Mobile Dashboard */}
             <div
               data-testid="hero-dashboard-preview"
-              className="relative browser-frame animate-scale-in"
+              className="relative animate-scale-in"
             >
-              <div className="browser-dots">
-                <div className="browser-dot bg-red-400" />
-                <div className="browser-dot bg-yellow-400" />
-                <div className="browser-dot bg-green-400" />
-              </div>
               <img
                 src={DASHBOARD_IMG}
-                alt="atmytyp Dashboard"
-                className="w-full rounded-b-lg"
+                alt="atmytyp Dashboard on Laptop and Mobile"
+                className="w-full h-auto drop-shadow-2xl"
               />
             </div>
 
@@ -120,25 +115,6 @@ export default function HeroSection() {
                 data-testid="hero-mascot"
                 className="w-full h-auto drop-shadow-2xl"
               />
-            </div>
-
-            {/* Floating stats cards */}
-            <div
-              className="absolute -left-4 top-1/4 bg-white rounded-xl shadow-xl p-4 float-element-delayed hidden md:block"
-              data-testid="floating-stat-sales"
-            >
-              <div className="text-sm text-slate-500">Total Sales</div>
-              <div className="text-2xl font-bold text-slate-900 font-mono">₹24.5L</div>
-              <div className="text-xs text-green-500 font-medium">+12% this month</div>
-            </div>
-
-            <div
-              className="absolute -right-4 top-8 bg-white rounded-xl shadow-xl p-4 float-element hidden lg:block"
-              data-testid="floating-stat-employees"
-            >
-              <div className="text-sm text-slate-500">Employees</div>
-              <div className="text-2xl font-bold text-slate-900 font-mono">156</div>
-              <div className="text-xs text-orange-500 font-medium">All tracked</div>
             </div>
           </div>
         </div>
