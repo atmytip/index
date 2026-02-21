@@ -206,7 +206,7 @@ export default function DemoBookingSection() {
             {/* Mascot */}
             <div className="flex justify-center">
               <img
-                src={MASCOT_CTA}
+                src={MASCOT_WHY_BOOK}
                 alt="atmytyp Mascot"
                 data-testid="demo-mascot"
                 className="w-48 h-auto drop-shadow-lg float-element"
