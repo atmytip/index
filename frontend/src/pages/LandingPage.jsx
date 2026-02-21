@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import DashboardSection from "@/components/DashboardSection";
 import PricingSection from "@/components/PricingSection";
 import EmployeePortalSection from "@/components/EmployeePortalSection";
 import DemoBookingSection from "@/components/DemoBookingSection";
@@ -25,7 +24,6 @@ export default function LandingPage() {
       <main>
         <HeroSection />
         <FeaturesSection />
-        <DashboardSection />
         <PricingSection />
         <EmployeePortalSection />
         <DemoBookingSection />
