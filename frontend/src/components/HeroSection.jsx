@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
-const DASHBOARD_IMG = "https://customer-assets.emergentagent.com/job_employee-pricing-hub/artifacts/vz1f4gof_image.png";
+const DASHBOARD_IMG = "https://customer-assets.emergentagent.com/job_employee-pricing-hub/artifacts/1m4wyn99_Gemini_Generated_Image_voaxiwvoaxiwvoax.png";
 const MASCOT_HERO = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/eiqbom3k_Mascot_5.png";
 
 const highlights = [
