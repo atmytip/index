@@ -79,10 +79,6 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-orange-500" />
                 <span>+91 98765 43210</span>
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-orange-500" />
-                <span>Bangalore, India</span>
-              </div>
             </div>
           </div>
 
