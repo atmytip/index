@@ -52,15 +52,6 @@ const features = [
       { icon: Building2, title: "Departments", desc: "Organize your workforce" },
     ],
   },
-  {
-    category: "Data & Reports",
-    color: "bg-orange-500",
-    lightColor: "bg-orange-50",
-    textColor: "text-orange-600",
-    items: [
-      { icon: BarChart3, title: "Executive Reports", desc: "Insights for quick decisions" },
-    ],
-  },
 ];
 
 export default function FeaturesSection() {
