@@ -65,7 +65,7 @@ export default function DemoBookingSection() {
       return;
     }
 
-    if (!formData.name || !formData.email || !formData.company || !formData.employees || !formData.phone || !formData.message) {
+    if (!formData.name || !formData.email || !formData.company || !formData.employees || !formData.phone) {
       toast.error("Please fill in all required fields");
       return;
     }
