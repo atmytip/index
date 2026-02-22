@@ -324,45 +324,48 @@ export default function DemoBookingSection() {
                   </Select>
                 </div>
 
-                {/* Calendar */}
-                <div>
-                  <Label className="text-slate-700 font-semibold text-sm flex items-center gap-2">
-                    <CalendarIcon className="w-4 h-4 text-orange-500" />
-                    Select Demo Date *
-                  </Label>
-                  <div className="mt-3 flex justify-center">
-                    <div className="bg-slate-50/50 rounded-2xl p-3 border border-slate-200">
-                      <Calendar
-                        mode="single"
-                        selected={date}
-                        onSelect={setDate}
-                        disabled={disabledDays}
-                        data-testid="demo-calendar"
-                        className="rounded-xl"
-                      />
+                {/* Calendar and Message side by side */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Calendar */}
+                  <div>
+                    <Label className="text-slate-700 font-semibold text-sm flex items-center gap-2">
+                      <CalendarIcon className="w-4 h-4 text-orange-500" />
+                      Select Demo Date *
+                    </Label>
+                    <div className="mt-3">
+                      <div className="bg-slate-50/50 rounded-2xl p-3 border border-slate-200">
+                        <Calendar
+                          mode="single"
+                          selected={date}
+                          onSelect={setDate}
+                          disabled={disabledDays}
+                          data-testid="demo-calendar"
+                          className="rounded-xl"
+                        />
+                      </div>
                     </div>
+                    {date && (
+                      <p className="text-center text-sm text-orange-600 font-semibold mt-3 bg-orange-50 py-2 px-4 rounded-full">
+                        Selected: {date.toLocaleDateString("en-IN", { weekday: "long", month: "short", day: "numeric" })}
+                      </p>
+                    )}
                   </div>
-                  {date && (
-                    <p className="text-center text-sm text-orange-600 font-semibold mt-3 bg-orange-50 py-2 px-4 rounded-full inline-flex mx-auto w-full justify-center">
-                      Selected: {date.toLocaleDateString("en-IN", { weekday: "long", month: "short", day: "numeric" })}
-                    </p>
-                  )}
-                </div>
 
-                {/* Message */}
-                <div>
-                  <Label htmlFor="message" className="text-slate-700 font-semibold text-sm">
-                    Anything specific you'd like to see? (Optional)
-                  </Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Tell us about your business needs..."
-                    data-testid="demo-input-message"
-                    className="mt-2 rounded-xl border-slate-200 bg-slate-50/50 focus:bg-white focus:border-orange-500 focus:ring-orange-500 min-h-[100px] transition-all"
-                  />
+                  {/* Message */}
+                  <div className="flex flex-col">
+                    <Label htmlFor="message" className="text-slate-700 font-semibold text-sm">
+                      Anything specific you'd like to see? (Optional)
+                    </Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your business needs..."
+                      data-testid="demo-input-message"
+                      className="mt-3 rounded-xl border-slate-200 bg-slate-50/50 focus:bg-white focus:border-orange-500 focus:ring-orange-500 flex-1 min-h-[280px] transition-all"
+                    />
+                  </div>
                 </div>
 
                 {/* Submit */}
