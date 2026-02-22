@@ -1,4 +1,4 @@
-import { Wallet, Calendar, FileText, Bell, Smartphone, UserCheck, Check } from "lucide-react";
+import { Wallet, Calendar, Receipt, Bell, Smartphone, MessageCircle, Check } from "lucide-react";
 
 const features = [
   {
@@ -14,9 +14,9 @@ const features = [
     bg: "bg-blue-500",
   },
   {
-    icon: FileText,
-    title: "Tax Documents",
-    desc: "Download Form 16 instantly",
+    icon: Receipt,
+    title: "Expense Manage",
+    desc: "Track & submit expenses easily",
     bg: "bg-violet-500",
   },
   {
@@ -32,9 +32,9 @@ const features = [
     bg: "bg-pink-500",
   },
   {
-    icon: UserCheck,
-    title: "Self Service",
-    desc: "Update info without HR",
+    icon: MessageCircle,
+    title: "Chat",
+    desc: "Instant team communication",
     bg: "bg-indigo-500",
   },
 ];
