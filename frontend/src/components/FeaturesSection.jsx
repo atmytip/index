@@ -124,7 +124,7 @@ export default function FeaturesSection() {
               <div
                 key={feature.title}
                 data-testid={`feature-card-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
-                className="group relative bg-white rounded-3xl p-6 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 overflow-hidden"
+                className="group relative bg-white rounded-3xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-100 overflow-hidden"
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
