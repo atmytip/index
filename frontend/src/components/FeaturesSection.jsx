@@ -10,47 +10,32 @@ import {
   Receipt,
   Wallet,
   Building2,
+  TrendingUp,
+  PieChart,
+  UserCheck,
 } from "lucide-react";
 
 const MASCOT_FINANCE = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/5cure82k_Mascot_3.png";
 const MASCOT_OPS = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/fag4z2hz_Mascot_8.png";
 
-const features = [
-  {
-    category: "Operations",
-    color: "bg-blue-500",
-    lightColor: "bg-blue-50",
-    textColor: "text-blue-600",
-    items: [
-      { icon: ShoppingCart, title: "Sales Management", desc: "Track leads, deals, and conversions" },
-      { icon: ClipboardList, title: "Service & Tasks", desc: "Assign, track, and complete tasks" },
-      { icon: Package, title: "Inventory", desc: "Real-time stock management" },
-      { icon: Truck, title: "Supplier Management", desc: "Vendor relationships simplified" },
-    ],
-  },
-  {
-    category: "Finance",
-    color: "bg-emerald-500",
-    lightColor: "bg-emerald-50",
-    textColor: "text-emerald-600",
-    items: [
-      { icon: Calculator, title: "Full Accounting", desc: "Ledgers, journals, balance sheets" },
-      { icon: FileText, title: "Invoicing & Quotes", desc: "Professional invoices in seconds" },
-      { icon: Receipt, title: "Income & Expense", desc: "Every rupee tracked automatically" },
-      { icon: Wallet, title: "Payment Tracking", desc: "Never miss a payment" },
-    ],
-  },
-  {
-    category: "HR",
-    color: "bg-violet-500",
-    lightColor: "bg-violet-50",
-    textColor: "text-violet-600",
-    items: [
-      { icon: Users, title: "HR Management", desc: "Complete employee lifecycle" },
-      { icon: Clock, title: "Attendance", desc: "Time tracking made simple" },
-      { icon: Building2, title: "Departments", desc: "Organize your workforce" },
-    ],
-  },
+const operationsFeatures = [
+  { icon: ShoppingCart, title: "Sales Management", desc: "Track leads, deals, and conversions in real-time", color: "from-blue-500 to-blue-600" },
+  { icon: ClipboardList, title: "Service & Tasks", desc: "Assign, track, and complete tasks efficiently", color: "from-blue-400 to-blue-500" },
+  { icon: Package, title: "Inventory", desc: "Real-time stock management & alerts", color: "from-cyan-500 to-blue-500" },
+  { icon: Truck, title: "Supplier Management", desc: "Vendor relationships simplified", color: "from-blue-600 to-indigo-600" },
+];
+
+const financeFeatures = [
+  { icon: Calculator, title: "Full Accounting", desc: "Ledgers, journals, balance sheets - all automated", color: "from-emerald-500 to-emerald-600" },
+  { icon: FileText, title: "Invoicing & Quotes", desc: "Professional invoices in seconds", color: "from-green-500 to-emerald-500" },
+  { icon: Receipt, title: "Income & Expense", desc: "Every rupee tracked automatically", color: "from-teal-500 to-emerald-500" },
+  { icon: Wallet, title: "Payment Tracking", desc: "Never miss a payment again", color: "from-emerald-600 to-green-600" },
+];
+
+const hrFeatures = [
+  { icon: Users, title: "HR Management", desc: "Complete employee lifecycle management", color: "from-violet-500 to-violet-600" },
+  { icon: Clock, title: "Attendance", desc: "Time tracking made simple & accurate", color: "from-purple-500 to-violet-500" },
+  { icon: Building2, title: "Departments", desc: "Organize your workforce seamlessly", color: "from-violet-600 to-purple-600" },
 ];
 
 export default function FeaturesSection() {
@@ -58,11 +43,15 @@ export default function FeaturesSection() {
     <section
       id="features"
       data-testid="features-section"
-      className="py-20 md:py-32 bg-white relative"
+      className="py-20 md:py-32 bg-slate-50 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <span className="inline-block bg-orange-100 text-orange-700 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
             All-in-One Platform
           </span>
@@ -78,65 +67,6 @@ export default function FeaturesSection() {
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="space-y-12">
-          {features.map((group, groupIdx) => (
-            <div key={group.category} className="relative">
-              {/* Category Header */}
-              <div className="flex items-center gap-3 mb-6">
-                <div className={`w-3 h-3 rounded-full ${group.color}`} />
-                <h3
-                  data-testid={`feature-category-${group.category.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="text-xl font-bold text-slate-800"
-                >
-                  {group.category}
-                </h3>
-              </div>
-
-              {/* Feature Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                {group.items.map((feature, idx) => (
-                  <div
-                    key={feature.title}
-                    data-testid={`feature-card-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="group bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-2xl p-6 md:p-8 relative overflow-hidden"
-                  >
-                    {/* Icon */}
-                    <div
-                      className={`feature-icon ${group.lightColor} ${group.textColor} mb-4`}
-                    >
-                      <feature.icon className="w-6 h-6" />
-                    </div>
-
-                    {/* Content */}
-                    <h4 className="text-lg font-bold text-slate-900 mb-2">
-                      {feature.title}
-                    </h4>
-                    <p className="text-slate-600 text-sm">{feature.desc}</p>
-
-                    {/* Hover accent */}
-                    <div
-                      className={`absolute bottom-0 left-0 right-0 h-1 ${group.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}
-                    />
-                  </div>
-                ))}
-
-                {/* Mascot for HR category */}
-                {group.category === "HR" && (
-                  <div className="hidden lg:flex items-end justify-center">
-                    <img
-                      src={MASCOT_FINANCE}
-                      alt="HR Mascot"
-                      data-testid="mascot-hr"
-                      className="w-52 h-auto drop-shadow-lg float-element"
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Operations Mascot */}
         <div className="absolute top-48 right-12 w-44 hidden xl:block">
           <img
@@ -145,6 +75,139 @@ export default function FeaturesSection() {
             data-testid="mascot-operations"
             className="w-full h-auto opacity-90 float-element-delayed"
           />
+        </div>
+
+        {/* Operations Section */}
+        <div className="mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+              <TrendingUp className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h3 data-testid="feature-category-operations" className="text-2xl font-bold text-slate-900">
+                Operations
+              </h3>
+              <p className="text-slate-500 text-sm">Streamline your daily workflows</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {operationsFeatures.map((feature, idx) => (
+              <div
+                key={feature.title}
+                data-testid={`feature-card-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="group relative bg-white rounded-3xl p-6 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 overflow-hidden"
+              >
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 shadow-lg group-hover:bg-white/20 group-hover:shadow-none transition-all duration-500`}>
+                    <feature.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h4 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-white transition-colors duration-500">
+                    {feature.title}
+                  </h4>
+                  <p className="text-slate-600 text-sm group-hover:text-white/80 transition-colors duration-500">
+                    {feature.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Finance Section */}
+        <div className="mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
+              <PieChart className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h3 data-testid="feature-category-finance" className="text-2xl font-bold text-slate-900">
+                Finance
+              </h3>
+              <p className="text-slate-500 text-sm">Complete financial control</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {financeFeatures.map((feature, idx) => (
+              <div
+                key={feature.title}
+                data-testid={`feature-card-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="group relative bg-white rounded-3xl p-6 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 overflow-hidden"
+              >
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 shadow-lg group-hover:bg-white/20 group-hover:shadow-none transition-all duration-500`}>
+                    <feature.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h4 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-white transition-colors duration-500">
+                    {feature.title}
+                  </h4>
+                  <p className="text-slate-600 text-sm group-hover:text-white/80 transition-colors duration-500">
+                    {feature.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* HR Section */}
+        <div>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-violet-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
+              <UserCheck className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h3 data-testid="feature-category-hr" className="text-2xl font-bold text-slate-900">
+                HR
+              </h3>
+              <p className="text-slate-500 text-sm">Empower your workforce</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {hrFeatures.map((feature, idx) => (
+              <div
+                key={feature.title}
+                data-testid={`feature-card-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="group relative bg-white rounded-3xl p-6 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 overflow-hidden"
+              >
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 shadow-lg group-hover:bg-white/20 group-hover:shadow-none transition-all duration-500`}>
+                    <feature.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h4 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-white transition-colors duration-500">
+                    {feature.title}
+                  </h4>
+                  <p className="text-slate-600 text-sm group-hover:text-white/80 transition-colors duration-500">
+                    {feature.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+
+            {/* Mascot for HR category */}
+            <div className="hidden lg:flex items-center justify-center">
+              <img
+                src={MASCOT_FINANCE}
+                alt="HR Mascot"
+                data-testid="mascot-hr"
+                className="w-52 h-auto drop-shadow-lg float-element"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
