@@ -151,16 +151,11 @@ export default function FeaturesSection() {
 
         {/* HR Section */}
         <div>
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-violet-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
-              <UserCheck className="w-6 h-6 text-white" />
-            </div>
-            <div className="text-center">
-              <h3 data-testid="feature-category-hr" className="text-2xl font-bold text-slate-900">
-                HR
-              </h3>
-              <p className="text-slate-500 text-sm">Empower your workforce</p>
-            </div>
+          <div className="text-center mb-8">
+            <h3 data-testid="feature-category-hr" className="text-2xl font-bold text-slate-900">
+              HR
+            </h3>
+            <p className="text-slate-500 text-sm">Empower your workforce</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
