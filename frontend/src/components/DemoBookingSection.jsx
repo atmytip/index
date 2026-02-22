@@ -161,7 +161,7 @@ export default function DemoBookingSection() {
           <div className="flex justify-center -mb-4">
             <img
               src={MASCOT_CTA}
-              alt="atmytyp Mascot"
+              alt="atmytip Mascot"
               data-testid="demo-header-mascot"
               className="w-44 md:w-56 h-auto drop-shadow-lg"
             />
@@ -214,7 +214,7 @@ export default function DemoBookingSection() {
                 <div className="flex justify-center mt-16">
                   <img
                     src={MASCOT_WHY_BOOK}
-                    alt="atmytyp Mascot"
+                    alt="atmytip Mascot"
                     data-testid="demo-mascot"
                     className="w-56 h-auto drop-shadow-lg"
                   />
