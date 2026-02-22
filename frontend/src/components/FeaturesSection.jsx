@@ -79,11 +79,11 @@ export default function FeaturesSection() {
 
         {/* Operations Section */}
         <div className="mb-20">
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center justify-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
               <TrendingUp className="w-6 h-6 text-white" />
             </div>
-            <div>
+            <div className="text-center">
               <h3 data-testid="feature-category-operations" className="text-2xl font-bold text-slate-900">
                 Operations
               </h3>
