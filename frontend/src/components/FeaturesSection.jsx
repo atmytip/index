@@ -120,11 +120,11 @@ export default function FeaturesSection() {
 
         {/* Finance Section */}
         <div className="mb-20">
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center justify-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
               <PieChart className="w-6 h-6 text-white" />
             </div>
-            <div>
+            <div className="text-center">
               <h3 data-testid="feature-category-finance" className="text-2xl font-bold text-slate-900">
                 Finance
               </h3>
