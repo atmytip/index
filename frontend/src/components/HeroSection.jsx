@@ -99,7 +99,7 @@ export default function HeroSection() {
             <div className="absolute -left-20 md:-left-28 bottom-1/4 w-36 md:w-48 float-element z-10">
               <img
                 src={MASCOT_HERO}
-                alt="atmytyp Mascot"
+                alt="atmytip Mascot"
                 data-testid="hero-mascot"
                 className="w-full h-auto drop-shadow-2xl"
               />
@@ -112,7 +112,7 @@ export default function HeroSection() {
             >
               <img
                 src={DASHBOARD_IMG}
-                alt="atmytyp Dashboard on Laptop and Mobile"
+                alt="atmytip Dashboard on Laptop and Mobile"
                 className="w-full h-auto drop-shadow-2xl"
               />
             </div>
