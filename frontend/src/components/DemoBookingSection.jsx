@@ -355,7 +355,7 @@ export default function DemoBookingSection() {
                   {/* Message */}
                   <div className="flex flex-col">
                     <Label htmlFor="message" className="text-slate-700 font-semibold text-sm">
-                      Anything specific you'd like to see? *
+                      Anything specific you'd like to see? (Optional)
                     </Label>
                     <Textarea
                       id="message"
@@ -365,7 +365,6 @@ export default function DemoBookingSection() {
                       placeholder="Tell us about your business needs..."
                       data-testid="demo-input-message"
                       className="mt-3 rounded-xl border-slate-200 bg-slate-50/50 focus:bg-white focus:border-orange-500 focus:ring-orange-500 flex-1 min-h-[280px] transition-all"
-                      required
                     />
                   </div>
                 </div>
