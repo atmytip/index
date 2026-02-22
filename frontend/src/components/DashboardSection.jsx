@@ -71,7 +71,7 @@ export default function DashboardSection() {
             </div>
             <img
               src={DASHBOARD_IMG}
-              alt="atmytyp Executive Dashboard"
+              alt="atmytip Executive Dashboard"
               className="w-full rounded-b-lg"
             />
           </div>
