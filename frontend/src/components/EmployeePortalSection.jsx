@@ -6,36 +6,42 @@ const features = [
     title: "Pay Slips",
     desc: "Access salary details anytime",
     bg: "bg-emerald-500",
+    hoverBg: "hover:bg-emerald-500",
   },
   {
     icon: Calendar,
     title: "Leave Balance",
     desc: "Apply & track leaves easily",
     bg: "bg-blue-500",
+    hoverBg: "hover:bg-blue-500",
   },
   {
     icon: Receipt,
     title: "Expense Manage",
     desc: "Track & submit expenses easily",
     bg: "bg-violet-500",
+    hoverBg: "hover:bg-violet-500",
   },
   {
     icon: Bell,
     title: "Announcements",
     desc: "Stay updated with news",
     bg: "bg-orange-500",
+    hoverBg: "hover:bg-orange-500",
   },
   {
     icon: Smartphone,
     title: "Mobile App",
     desc: "Access from anywhere",
     bg: "bg-pink-500",
+    hoverBg: "hover:bg-pink-500",
   },
   {
     icon: MessageCircle,
     title: "Chat",
     desc: "Instant team communication",
     bg: "bg-indigo-500",
+    hoverBg: "hover:bg-indigo-500",
   },
 ];
 
