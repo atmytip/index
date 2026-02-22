@@ -105,12 +105,12 @@ export default function EmployeePortalSection() {
               </ul>
               
               {/* Mascot */}
-              <div className="hidden md:block">
+              <div className="hidden md:block -mt-16">
                 <img
                   src={MASCOT_EMPLOYEE}
                   alt="Employee Portal Mascot"
                   data-testid="mascot-employee-portal"
-                  className="w-44 h-auto drop-shadow-lg"
+                  className="w-56 h-auto drop-shadow-lg"
                 />
               </div>
             </div>
