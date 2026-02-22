@@ -176,7 +176,7 @@ export default function DemoBookingSection() {
             Book Your Free Demo
           </h2>
           <p className="text-lg text-slate-600">
-            See how atmytip can transform your business operations in just one call.
+            Give us 15 minutes; we'll give you back 20 hours a week. That's a ROI guaranteed.
           </p>
         </div>
 
