@@ -57,7 +57,7 @@ export default function Footer() {
           <div className="col-span-2">
             <img
               src={LOGO_URL}
-              alt="atmytyp"
+              alt="atmytip"
               className="h-8 w-auto mb-4 brightness-0 invert"
               data-testid="footer-logo"
             />
@@ -194,7 +194,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} atmytyp. All rights reserved.
+            © {new Date().getFullYear()} atmytip. All rights reserved.
           </p>
 
           {/* Social Links */}
