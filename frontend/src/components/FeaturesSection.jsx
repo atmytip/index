@@ -188,7 +188,7 @@ export default function FeaturesSection() {
                 data-testid="mascot-hr"
                 className="w-52 h-auto drop-shadow-lg float-element"
               />
-              <p className="mt-4 text-lg font-bold text-slate-700">What else?</p>
+              <p className="mt-1 text-lg font-bold text-slate-700">What else?</p>
             </div>
           </div>
         </div>
