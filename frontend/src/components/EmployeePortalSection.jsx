@@ -87,8 +87,7 @@ export default function EmployeePortalSection() {
               <span className="block text-orange-500">Employee</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-sm">
-              Our self-service portal gives everyone in your team the tools they need — 
-              reducing HR workload and increasing satisfaction across your organization.
+              Let your team manage their own leave, expenses, and tasks. Rather than answer, 'How many sick days do I have left?' or 'What is my work today?'
             </p>
 
             {/* Benefits List */}
