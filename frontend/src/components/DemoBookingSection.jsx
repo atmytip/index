@@ -322,15 +322,15 @@ export default function DemoBookingSection() {
                 </div>
 
                 {/* Calendar and Message side by side */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
                   {/* Calendar */}
-                  <div>
+                  <div className="flex flex-col">
                     <Label className="text-slate-700 font-semibold text-sm flex items-center gap-2">
                       <CalendarIcon className="w-4 h-4 text-orange-500" />
                       Select Demo Date *
                     </Label>
-                    <div className="mt-3">
-                      <div className="bg-slate-50/50 rounded-2xl p-3 border border-slate-200">
+                    <div className="mt-3 flex-1 flex flex-col">
+                      <div className="bg-slate-50/50 rounded-2xl p-3 border border-slate-200 flex-1 flex items-center justify-center">
                         <Calendar
                           mode="single"
                           selected={date}
