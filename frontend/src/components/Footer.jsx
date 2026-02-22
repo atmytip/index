@@ -200,26 +200,14 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
-              social.active ? (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  data-testid={`footer-social-${social.label.toLowerCase()}`}
-                  className="w-10 h-10 bg-slate-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ) : (
-                <span
-                  key={social.label}
-                  data-testid={`footer-social-${social.label.toLowerCase()}`}
-                  className="w-10 h-10 bg-slate-800/50 rounded-full flex items-center justify-center cursor-not-allowed"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5 text-slate-600" />
-                </span>
-              )
+              <span
+                key={social.label}
+                data-testid={`footer-social-${social.label.toLowerCase()}`}
+                className={`w-10 h-10 ${social.color} rounded-full flex items-center justify-center cursor-pointer transition-all`}
+                aria-label={social.label}
+              >
+                <social.icon className="w-5 h-5 text-white" />
+              </span>
             ))}
           </div>
         </div>
