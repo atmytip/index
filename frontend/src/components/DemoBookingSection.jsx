@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-import { CheckCircle2, Calendar as CalendarIcon, Clock, Users, Shield, Sparkles, ArrowRight } from "lucide-react";
+import { CheckCircle2, Calendar as CalendarIcon, Clock, Users, Shield, ArrowRight } from "lucide-react";
 import axios from "axios";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
