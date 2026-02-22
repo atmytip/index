@@ -211,13 +211,14 @@ export default function DemoBookingSection() {
                 </div>
 
                 {/* Mascot */}
-                <div className="flex justify-center mt-16">
+                <div className="flex flex-col items-center mt-16">
                   <img
                     src={MASCOT_WHY_BOOK}
                     alt="atmytip Mascot"
                     data-testid="demo-mascot"
                     className="w-56 h-auto drop-shadow-lg"
                   />
+                  <p className="-mt-2 text-lg font-bold text-white">Why not test out...?</p>
                 </div>
               </div>
             </div>
