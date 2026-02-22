@@ -86,13 +86,13 @@ export default function EmployeePortalSection() {
               Empower Every
               <span className="block text-orange-500">Employee</span>
             </h2>
-            <p className="text-lg text-slate-400 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-sm">
               Our self-service portal gives everyone in your team the tools they need — 
               reducing HR workload and increasing satisfaction across your organization.
             </p>
 
             {/* Benefits List */}
-            <div className="flex items-start gap-6">
+            <div className="flex items-center gap-6">
               <ul className="space-y-4 flex-1">
                 {benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export default function EmployeePortalSection() {
               </ul>
               
               {/* Mascot */}
-              <div className="hidden md:block -mt-12">
+              <div className="hidden md:block">
                 <img
                   src={MASCOT_EMPLOYEE}
                   alt="Employee Portal Mascot"
