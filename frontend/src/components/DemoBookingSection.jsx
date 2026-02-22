@@ -224,8 +224,8 @@ export default function DemoBookingSection() {
           </div>
 
           {/* Right - Form (3 columns) */}
-          <div className="lg:col-span-3">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-slate-100 relative overflow-hidden">
+          <div className="lg:col-span-3 flex">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-slate-100 relative overflow-hidden w-full">
               {/* Decorative corner */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-100 to-transparent rounded-bl-full" />
               
