@@ -216,7 +216,7 @@ export default function DemoBookingSection() {
                     src={MASCOT_WHY_BOOK}
                     alt="atmytip Mascot"
                     data-testid="demo-mascot"
-                    className="w-56 h-auto drop-shadow-lg"
+                    className="w-56 h-auto drop-shadow-lg float-element"
                   />
                   <p className="-mt-2 text-lg font-bold text-white">Why not test out...?</p>
                 </div>
