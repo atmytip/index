@@ -42,7 +42,7 @@ export default function Navigation({ isScrolled }) {
             <img
               src={LOGO_URL}
               alt="atmytip"
-              className="h-8 md:h-10 w-auto"
+              className="h-6 md:h-7 w-auto"
             />
           </a>
 
