@@ -66,6 +66,7 @@ export default function Navigation({ isScrolled }) {
               variant="ghost"
               data-testid="nav-login-btn"
               className="text-slate-600 hover:text-orange-600 hover:bg-orange-50 rounded-full px-6 font-medium"
+              onClick={() => window.open('https://www.atmytip.biz', '_blank')}
             >
               Login
             </Button>
