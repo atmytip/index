@@ -351,7 +351,7 @@ export default function DemoBookingSection() {
                   {/* Message */}
                   <div className="flex flex-col">
                     <Label htmlFor="message" className="text-slate-700 font-semibold text-sm">
-                      Any specific 'headache' you want us to solve first?
+                      Any specific 'headache' you want us to solve?
                     </Label>
                     <Textarea
                       id="message"
