@@ -73,7 +73,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-orange-500" />
-                <span>+919960005859</span>
+                <a href="tel:+919960005859" className="hover:text-orange-500 transition-colors">+919960005859</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <WhatsAppIcon className="w-4 h-4 text-green-500" />
+                <a href="https://wa.me/919960005859" target="_blank" rel="noopener noreferrer" className="hover:text-green-500 transition-colors">+919960005859</a>
               </div>
             </div>
           </div>
