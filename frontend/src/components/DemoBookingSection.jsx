@@ -211,7 +211,7 @@ export default function DemoBookingSection() {
                 </div>
 
                 {/* Mascot */}
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-12">
                   <img
                     src={MASCOT_WHY_BOOK}
                     alt="atmytyp Mascot"
