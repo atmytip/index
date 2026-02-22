@@ -92,16 +92,28 @@ export default function EmployeePortalSection() {
             </p>
 
             {/* Benefits List */}
-            <ul className="space-y-4">
-              {benefits.map((benefit, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-orange-500" />
-                  </div>
-                  <span className="text-slate-300 font-medium">{benefit}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-start gap-6">
+              <ul className="space-y-4 flex-1">
+                {benefits.map((benefit, idx) => (
+                  <li key={idx} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-4 h-4 text-orange-500" />
+                    </div>
+                    <span className="text-slate-300 font-medium">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              {/* Mascot */}
+              <div className="hidden md:block">
+                <img
+                  src={MASCOT_EMPLOYEE}
+                  alt="Employee Portal Mascot"
+                  data-testid="mascot-employee-portal"
+                  className="w-40 h-auto drop-shadow-lg"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Right - Feature Cards */}
