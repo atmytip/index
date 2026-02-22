@@ -152,7 +152,7 @@ export default function FeaturesSection() {
             <h3 data-testid="feature-category-hr" className="text-2xl font-bold text-slate-900">
               HR
             </h3>
-            <p className="text-slate-500 text-sm">Empower your workforce</p>
+            <p className="text-slate-500 text-sm">Manage your team without the micromanaging</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
