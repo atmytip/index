@@ -59,7 +59,7 @@ class DemoBookingCreate(BaseModel):
     phone: str = Field(..., min_length=5, max_length=20)
     employees: str = Field(..., description="Employee count range")
     date: str = Field(..., description="Selected demo date in ISO format")
-    message: str = Field(..., min_length=1, max_length=1000)
+    message: str = Field(default="", max_length=1000)
 
 
 class DemoBooking(BaseModel):
