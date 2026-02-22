@@ -22,7 +22,7 @@ const MASCOT_CTA = "https://customer-assets.emergentagent.com/job_employee-prici
 const MASCOT_WHY_BOOK = "https://customer-assets.emergentagent.com/job_employee-pricing-hub/artifacts/fy06h7y9_Mascot_9.png";
 
 const benefits = [
-  { icon: Clock, text: "30-minute personalized demo" },
+  { icon: Clock, text: "Personalised demo" },
   { icon: Users, text: "See features relevant to your business" },
   { icon: Shield, text: "No commitment required" },
 ];
