@@ -180,10 +180,10 @@ export default function DemoBookingSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-stretch">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Left - Why Book (2 columns) */}
-          <div className="lg:col-span-2 flex">
-            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white relative overflow-hidden flex flex-col w-full">
+          <div className="lg:col-span-2 space-y-6">
+            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white relative overflow-hidden">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-violet-500/10 rounded-full blur-2xl" />
