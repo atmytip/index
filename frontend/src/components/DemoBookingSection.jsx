@@ -163,7 +163,7 @@ export default function DemoBookingSection() {
               src={MASCOT_CTA}
               alt="atmytip Mascot"
               data-testid="demo-header-mascot"
-              className="w-44 md:w-56 h-auto drop-shadow-lg"
+              className="w-44 md:w-56 h-auto drop-shadow-lg -mr-12"
             />
           </div>
           <span className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full px-5 py-2 text-sm font-semibold mb-4 shadow-lg shadow-orange-500/30">
