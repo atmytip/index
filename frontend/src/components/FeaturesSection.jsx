@@ -80,7 +80,7 @@ export default function FeaturesSection() {
             <h3 data-testid="feature-category-operations" className="text-2xl font-bold text-slate-900">
               Operations
             </h3>
-            <p className="text-slate-500 text-sm">Streamline your daily workflows</p>
+            <p className="text-slate-500 text-sm">Streamline everything. Because your time is far too expensive</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
