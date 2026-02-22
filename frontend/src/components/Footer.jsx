@@ -4,44 +4,44 @@ const LOGO_URL = "https://customer-assets.emergentagent.com/job_employee-pricing
 
 const footerLinks = {
   product: [
-    { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Employee Portal", href: "#employee-portal" },
-    { label: "Integrations", href: "#" },
-    { label: "Updates", href: "#" },
+    { label: "Features", href: "#features", active: true },
+    { label: "Pricing", href: "#pricing", active: true },
+    { label: "Employee Portal", href: "#employee-portal", active: true },
+    { label: "Integrations", href: "#", active: false },
+    { label: "Updates", href: "#", active: false },
   ],
   company: [
-    { label: "About Us", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Press", href: "#" },
-    { label: "Contact", href: "#demo" },
+    { label: "About Us", href: "#", active: false },
+    { label: "Careers", href: "#", active: false },
+    { label: "Blog", href: "#", active: false },
+    { label: "Press", href: "#", active: false },
+    { label: "Contact", href: "#demo", active: true },
   ],
   resources: [
-    { label: "Help Center", href: "#" },
-    { label: "Documentation", href: "#" },
-    { label: "API Reference", href: "#" },
-    { label: "Community", href: "#" },
-    { label: "Status", href: "#" },
+    { label: "Help Center", href: "#", active: false },
+    { label: "Documentation", href: "#", active: false },
+    { label: "API Reference", href: "#", active: false },
+    { label: "Community", href: "#", active: false },
+    { label: "Status", href: "#", active: false },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
-    { label: "GDPR", href: "#" },
+    { label: "Privacy Policy", href: "#", active: false },
+    { label: "Terms of Service", href: "#", active: false },
+    { label: "Cookie Policy", href: "#", active: false },
+    { label: "GDPR", href: "#", active: false },
   ],
 };
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Facebook, href: "#", label: "Facebook", active: false },
+  { icon: Twitter, href: "#", label: "Twitter", active: false },
+  { icon: Linkedin, href: "#", label: "LinkedIn", active: false },
+  { icon: Instagram, href: "#", label: "Instagram", active: false },
 ];
 
 export default function Footer() {
   const scrollToSection = (href) => {
-    if (href.startsWith("#")) {
+    if (href.startsWith("#") && href !== "#") {
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -88,13 +88,22 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-slate-400 hover:text-orange-500 transition-colors text-sm"
-                  >
-                    {link.label}
-                  </button>
+                  {link.active ? (
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-slate-400 hover:text-orange-500 transition-colors text-sm cursor-pointer"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <span
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-slate-600 text-sm cursor-not-allowed"
+                    >
+                      {link.label}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -106,13 +115,22 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-slate-400 hover:text-orange-500 transition-colors text-sm"
-                  >
-                    {link.label}
-                  </button>
+                  {link.active ? (
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-slate-400 hover:text-orange-500 transition-colors text-sm cursor-pointer"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <span
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-slate-600 text-sm cursor-not-allowed"
+                    >
+                      {link.label}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -124,13 +142,22 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-slate-400 hover:text-orange-500 transition-colors text-sm"
-                  >
-                    {link.label}
-                  </button>
+                  {link.active ? (
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-slate-400 hover:text-orange-500 transition-colors text-sm cursor-pointer"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <span
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-slate-600 text-sm cursor-not-allowed"
+                    >
+                      {link.label}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -142,13 +169,22 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-slate-400 hover:text-orange-500 transition-colors text-sm"
-                  >
-                    {link.label}
-                  </button>
+                  {link.active ? (
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-slate-400 hover:text-orange-500 transition-colors text-sm cursor-pointer"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <span
+                      data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-slate-600 text-sm cursor-not-allowed"
+                    >
+                      {link.label}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -164,15 +200,26 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                data-testid={`footer-social-${social.label.toLowerCase()}`}
-                className="w-10 h-10 bg-slate-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors"
-                aria-label={social.label}
-              >
-                <social.icon className="w-5 h-5" />
-              </a>
+              social.active ? (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  data-testid={`footer-social-${social.label.toLowerCase()}`}
+                  className="w-10 h-10 bg-slate-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ) : (
+                <span
+                  key={social.label}
+                  data-testid={`footer-social-${social.label.toLowerCase()}`}
+                  className="w-10 h-10 bg-slate-800/50 rounded-full flex items-center justify-center cursor-not-allowed"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5 text-slate-600" />
+                </span>
+              )
             ))}
           </div>
         </div>
