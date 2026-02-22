@@ -4,6 +4,8 @@ from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
+import asyncio
+import resend
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List, Optional
@@ -17,6 +19,11 @@ load_dotenv(ROOT_DIR / '.env')
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
+
+# Resend configuration
+resend.api_key = os.environ.get('RESEND_API_KEY')
+SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
+RECIPIENT_EMAIL = os.environ.get('RECIPIENT_EMAIL', 'jitendra3588@gmail.com')
 
 # Create the main app without a prefix
 app = FastAPI()
@@ -49,10 +56,10 @@ class DemoBookingCreate(BaseModel):
     name: str = Field(..., min_length=2, max_length=100)
     email: EmailStr
     company: str = Field(..., min_length=2, max_length=100)
-    phone: Optional[str] = None
+    phone: str = Field(..., min_length=5, max_length=20)
     employees: str = Field(..., description="Employee count range")
     date: str = Field(..., description="Selected demo date in ISO format")
-    message: Optional[str] = None
+    message: str = Field(..., min_length=1, max_length=1000)
 
 
 class DemoBooking(BaseModel):
@@ -62,10 +69,10 @@ class DemoBooking(BaseModel):
     name: str
     email: str
     company: str
-    phone: Optional[str] = None
+    phone: str
     employees: str
     date: str
-    message: Optional[str] = None
+    message: str
     status: str = "pending"
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
@@ -87,6 +94,79 @@ class Contact(BaseModel):
     message: str
     status: str = "new"
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+async def send_demo_booking_email(booking: DemoBooking):
+    """Send email notification for new demo booking"""
+    try:
+        # Parse the date for display
+        booking_date = datetime.fromisoformat(booking.date.replace('Z', '+00:00'))
+        formatted_date = booking_date.strftime("%A, %B %d, %Y")
+        
+        html_content = f"""
+        <html>
+        <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <div style="background: linear-gradient(135deg, #F97316, #EA580C); padding: 20px; border-radius: 10px 10px 0 0;">
+                <h1 style="color: white; margin: 0;">New Demo Booking Request</h1>
+            </div>
+            <div style="background: #f8fafc; padding: 20px; border: 1px solid #e2e8f0; border-radius: 0 0 10px 10px;">
+                <h2 style="color: #1e293b; margin-top: 0;">Contact Details</h2>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #64748b;">Name:</td>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #1e293b;">{booking.name}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #64748b;">Email:</td>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #1e293b;">{booking.email}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #64748b;">Company:</td>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #1e293b;">{booking.company}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #64748b;">Phone:</td>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #1e293b;">{booking.phone}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #64748b;">Employees:</td>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #1e293b;">{booking.employees}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; font-weight: bold; color: #64748b;">Preferred Date:</td>
+                        <td style="padding: 10px 0; border-bottom: 1px solid #e2e8f0; color: #1e293b;">{formatted_date}</td>
+                    </tr>
+                </table>
+                
+                <h3 style="color: #1e293b; margin-top: 20px;">Message:</h3>
+                <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                    <p style="color: #475569; margin: 0; white-space: pre-wrap;">{booking.message}</p>
+                </div>
+                
+                <p style="color: #94a3b8; font-size: 12px; margin-top: 20px;">
+                    This email was sent from the atmytyp demo booking form.
+                </p>
+            </div>
+        </body>
+        </html>
+        """
+        
+        params = {
+            "from": SENDER_EMAIL,
+            "to": [RECIPIENT_EMAIL],
+            "subject": f"New Demo Booking: {booking.name} from {booking.company}",
+            "html": html_content
+        }
+        
+        # Run sync SDK in thread to keep FastAPI non-blocking
+        email_response = await asyncio.to_thread(resend.Emails.send, params)
+        logger.info(f"Demo booking email sent successfully: {email_response}")
+        return email_response
+        
+    except Exception as e:
+        logger.error(f"Failed to send demo booking email: {str(e)}")
+        # Don't raise - we still want to save the booking even if email fails
+        return None
 
 
 # Routes
@@ -134,6 +214,9 @@ async def create_demo_booking(input: DemoBookingCreate):
     
     await db.demo_bookings.insert_one(doc)
     logger.info(f"Demo booking created for {input.email}")
+    
+    # Send email notification (non-blocking)
+    await send_demo_booking_email(booking_obj)
     
     return booking_obj
 
