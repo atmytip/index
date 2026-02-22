@@ -116,7 +116,7 @@ export default function FeaturesSection() {
             <h3 data-testid="feature-category-finance" className="text-2xl font-bold text-slate-900">
               Finance
             </h3>
-            <p className="text-slate-500 text-sm">Complete financial control</p>
+            <p className="text-slate-500 text-sm">Financial control so precise, your CA might actually envy</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
