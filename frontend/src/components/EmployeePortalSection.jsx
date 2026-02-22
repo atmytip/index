@@ -33,8 +33,8 @@ const features = [
   },
   {
     icon: Smartphone,
-    title: "Mobile App",
-    desc: "Access from anywhere",
+    title: "Task & Service",
+    desc: "Update tasks on the go",
     bg: "bg-pink-500",
     hoverBg: "hover:bg-pink-500",
   },
