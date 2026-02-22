@@ -181,13 +181,14 @@ export default function FeaturesSection() {
             ))}
 
             {/* Mascot for HR category */}
-            <div className="hidden lg:flex items-center justify-center">
+            <div className="hidden lg:flex flex-col items-center justify-center">
               <img
                 src={MASCOT_FINANCE}
                 alt="HR Mascot"
                 data-testid="mascot-hr"
                 className="w-52 h-auto drop-shadow-lg float-element"
               />
+              <p className="mt-4 text-lg font-bold text-slate-700">What else?</p>
             </div>
           </div>
         </div>
