@@ -176,7 +176,7 @@ export default function DemoBookingSection() {
             Book Your Free Demo
           </h2>
           <p className="text-lg text-slate-600">
-            See how atmytyp can transform your business operations in just one call.
+            See how atmytip can transform your business operations in just one call.
           </p>
         </div>
 
