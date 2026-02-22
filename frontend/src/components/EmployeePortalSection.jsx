@@ -102,7 +102,7 @@ export default function EmployeePortalSection() {
               <div
                 key={feature.title}
                 data-testid={`portal-feature-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
-                className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-5 hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className={`w-12 h-12 ${feature.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -110,7 +110,7 @@ export default function EmployeePortalSection() {
                 <h4 className="font-bold text-white mb-1 text-sm">
                   {feature.title}
                 </h4>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <p className="text-slate-300 text-xs leading-relaxed">
                   {feature.desc}
                 </p>
               </div>
