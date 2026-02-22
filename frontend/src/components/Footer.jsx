@@ -18,7 +18,7 @@ const footerLinks = {
   product: [
     { label: "Features", href: "#features", active: true },
     { label: "Pricing", href: "#pricing", active: true },
-    { label: "Employee Portal", href: "#employee-portal", active: true },
+    { label: "Employee App", href: "#employee-portal", active: true },
   ],
   company: [
     { label: "About Us", href: "#", active: false },

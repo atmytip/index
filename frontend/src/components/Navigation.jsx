@@ -7,7 +7,7 @@ const LOGO_URL = "https://customer-assets.emergentagent.com/job_employee-pricing
 const navLinks = [
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Employee Portal", href: "#employee-portal" },
+  { label: "Employee App", href: "#employee-portal" },
   { label: "Book Demo", href: "#demo" },
 ];
 

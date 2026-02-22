@@ -77,7 +77,7 @@ export default function EmployeePortalSection() {
           {/* Left Content */}
           <div>
             <span className="inline-block bg-orange-500/20 text-orange-400 rounded-full px-4 py-1.5 text-sm font-semibold mb-6 border border-orange-500/30">
-              Employee Portal
+              Employee App
             </span>
             <h2
               data-testid="employee-portal-title"
@@ -108,7 +108,7 @@ export default function EmployeePortalSection() {
               <div className="hidden md:block -mt-32 ml-16">
                 <img
                   src={MASCOT_EMPLOYEE}
-                  alt="Employee Portal Mascot"
+                  alt="Employee App Mascot"
                   data-testid="mascot-employee-portal"
                   className="w-56 h-auto drop-shadow-lg"
                 />
