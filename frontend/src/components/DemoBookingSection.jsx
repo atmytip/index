@@ -284,7 +284,7 @@ export default function DemoBookingSection() {
                   </div>
                   <div>
                     <Label htmlFor="phone" className="text-slate-700 font-semibold text-sm">
-                      Phone (Optional)
+                      Phone *
                     </Label>
                     <Input
                       id="phone"
@@ -295,6 +295,7 @@ export default function DemoBookingSection() {
                       placeholder="+91 98765 43210"
                       data-testid="demo-input-phone"
                       className="mt-2 h-12 rounded-xl border-slate-200 bg-slate-50/50 focus:bg-white focus:border-orange-500 focus:ring-orange-500 transition-all"
+                      required
                     />
                   </div>
                 </div>
