@@ -94,7 +94,7 @@ export default function PricingSection() {
             Per Employee Pricing That Scales With You
           </h2>
           <p className="text-lg text-slate-600 mb-8">
-            7 days free. No credit card required. Cancel anytime—but fair warning: you might actually start enjoying it.
+            7 days free. No credit card required. Cancel anytime—but fair warning: you might actually start enjoying it 😊
           </p>
 
           {/* Toggle */}
