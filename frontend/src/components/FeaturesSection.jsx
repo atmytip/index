@@ -68,7 +68,7 @@ export default function FeaturesSection() {
         </div>
 
         {/* Operations Mascot */}
-        <div className="absolute top-60 right-8 w-52 hidden xl:block">
+        <div className="absolute top-52 right-8 w-52 hidden xl:block">
           <img
             src={MASCOT_OPS}
             alt="Operations Mascot"
