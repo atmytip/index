@@ -60,7 +60,7 @@ export default function FeaturesSection() {
           </h2>
           <p className="text-lg text-slate-600">
             From sales to HR, accounting to inventory — manage it all from one
-            powerful dashboard. No more switching between apps.
+            powerful dashboard. No more switching between apps. It's okay to feel powerful; we won't tell.
           </p>
         </div>
 
