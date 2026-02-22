@@ -1,5 +1,7 @@
 import { Wallet, Calendar, Receipt, Bell, Smartphone, MessageCircle, Check } from "lucide-react";
 
+const MASCOT_EMPLOYEE = "https://customer-assets.emergentagent.com/job_employee-pricing-hub/artifacts/i9bpcr2i_Mascot_1.png";
+
 const features = [
   {
     icon: Wallet,
