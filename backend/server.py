@@ -144,7 +144,7 @@ async def send_demo_booking_email(booking: DemoBooking):
                 </div>
                 
                 <p style="color: #94a3b8; font-size: 12px; margin-top: 20px;">
-                    This email was sent from the atmytyp demo booking form.
+                    This email was sent from the atmytip demo booking form.
                 </p>
             </div>
         </body>
@@ -172,12 +172,12 @@ async def send_demo_booking_email(booking: DemoBooking):
 # Routes
 @api_router.get("/")
 async def root():
-    return {"message": "atmytyp ERP API is running"}
+    return {"message": "atmytip ERP API is running"}
 
 
 @api_router.get("/health")
 async def health_check():
-    return {"status": "healthy", "service": "atmytyp-marketing"}
+    return {"status": "healthy", "service": "atmytip-marketing"}
 
 
 @api_router.post("/status", response_model=StatusCheck)
