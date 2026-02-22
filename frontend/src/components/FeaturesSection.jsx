@@ -10,9 +10,6 @@ import {
   Receipt,
   Wallet,
   Building2,
-  TrendingUp,
-  PieChart,
-  UserCheck,
 } from "lucide-react";
 
 const MASCOT_FINANCE = "https://customer-assets.emergentagent.com/job_9d6135f3-23bd-42ee-9e58-4a9a429b1833/artifacts/5cure82k_Mascot_3.png";
