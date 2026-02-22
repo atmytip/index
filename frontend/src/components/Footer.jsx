@@ -7,28 +7,18 @@ const footerLinks = {
     { label: "Features", href: "#features", active: true },
     { label: "Pricing", href: "#pricing", active: true },
     { label: "Employee Portal", href: "#employee-portal", active: true },
-    { label: "Integrations", href: "#", active: false },
-    { label: "Updates", href: "#", active: false },
   ],
   company: [
     { label: "About Us", href: "#", active: false },
     { label: "Careers", href: "#", active: false },
-    { label: "Blog", href: "#", active: false },
-    { label: "Press", href: "#", active: false },
     { label: "Contact", href: "#demo", active: true },
   ],
   resources: [
     { label: "Help Center", href: "#", active: false },
-    { label: "Documentation", href: "#", active: false },
-    { label: "API Reference", href: "#", active: false },
-    { label: "Community", href: "#", active: false },
-    { label: "Status", href: "#", active: false },
   ],
   legal: [
     { label: "Privacy Policy", href: "#", active: false },
     { label: "Terms of Service", href: "#", active: false },
-    { label: "Cookie Policy", href: "#", active: false },
-    { label: "GDPR", href: "#", active: false },
   ],
 };
 
