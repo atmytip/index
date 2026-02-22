@@ -216,7 +216,7 @@ export default function DemoBookingSection() {
                     src={MASCOT_WHY_BOOK}
                     alt="atmytyp Mascot"
                     data-testid="demo-mascot"
-                    className="w-40 h-auto drop-shadow-lg"
+                    className="w-56 h-auto drop-shadow-lg"
                   />
                 </div>
               </div>
