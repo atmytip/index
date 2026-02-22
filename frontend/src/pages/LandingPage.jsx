@@ -6,6 +6,7 @@ import PricingSection from "@/components/PricingSection";
 import EmployeePortalSection from "@/components/EmployeePortalSection";
 import DemoBookingSection from "@/components/DemoBookingSection";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +30,7 @@ export default function LandingPage() {
         <DemoBookingSection />
       </main>
       <Footer />
+      <FloatingContact />
     </div>
   );
 }
