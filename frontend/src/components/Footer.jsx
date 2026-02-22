@@ -29,10 +29,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook", active: false },
-  { icon: Twitter, href: "#", label: "Twitter", active: false },
-  { icon: Linkedin, href: "#", label: "LinkedIn", active: false },
-  { icon: Instagram, href: "#", label: "Instagram", active: false },
+  { icon: Facebook, href: "#", label: "Facebook", active: false, color: "bg-blue-600 hover:bg-blue-700" },
+  { icon: Twitter, href: "#", label: "Twitter", active: false, color: "bg-black hover:bg-gray-800" },
+  { icon: Linkedin, href: "#", label: "LinkedIn", active: false, color: "bg-blue-700 hover:bg-blue-800" },
+  { icon: Instagram, href: "#", label: "Instagram", active: false, color: "bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 hover:from-purple-700 hover:via-pink-600 hover:to-orange-500" },
 ];
 
 export default function Footer() {
