@@ -189,7 +189,7 @@ export default function DemoBookingSection() {
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-violet-500/10 rounded-full blur-2xl" />
               
               <div className="relative z-10">
-                <h3 className="text-xl font-bold text-orange-500 mb-6">Why Book a Demo?</h3>
+                <h3 className="text-xl font-bold text-orange-500 mb-6 text-center">Why Book a Demo?</h3>
 
                 <div className="space-y-4">
                   {benefits.map((benefit, idx) => (
