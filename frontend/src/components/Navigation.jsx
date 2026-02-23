@@ -116,7 +116,7 @@ export default function Navigation({ isScrolled }) {
                 variant="outline"
                 data-testid="mobile-login-btn"
                 className="w-full justify-center rounded-full border-slate-200"
-                onClick={() => window.open('https://www.atmytip.biz/signin', '_blank')}
+                onClick={() => window.open('http://www.atmytip.biz/signin', '_blank')}
               >
                 Login
               </Button>
