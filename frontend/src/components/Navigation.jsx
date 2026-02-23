@@ -66,7 +66,7 @@ export default function Navigation({ isScrolled }) {
               variant="ghost"
               data-testid="nav-login-btn"
               className="text-slate-600 hover:text-orange-600 hover:bg-orange-50 rounded-full px-6 font-medium"
-              onClick={() => window.open('https://www.atmytip.biz', '_blank')}
+              onClick={() => window.open('www.atmytip.biz/signin', '_blank')}
             >
               Login
             </Button>
@@ -116,7 +116,7 @@ export default function Navigation({ isScrolled }) {
                 variant="outline"
                 data-testid="mobile-login-btn"
                 className="w-full justify-center rounded-full border-slate-200"
-                onClick={() => window.open('https://www.atmytip.biz', '_blank')}
+                onClick={() => window.open('www.atmytip.biz/signin', '_blank')}
               >
                 Login
               </Button>
